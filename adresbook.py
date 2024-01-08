@@ -77,7 +77,7 @@ class Name(Field):
             raise ValueError('Wrong name')
 
     def is_valid(self):
-        regexp_name = re.compile(r'^[A-Z]{1}[a-zA-Z0-9]{3,15}$')
+        regexp_name = re.compile(r'^[a-zA-Z0-9]{3,15}$')
 
         return bool(regexp_name.match(self.__value))
 
